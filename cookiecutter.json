@@ -1,0 +1,12 @@
+{
+  "repository_name": "repository-name",
+  "project_name": "{{ cookiecutter.repository_name.lower().replace('-', '_') }}",
+  "author_name": "author",
+  "author_email": "author@gmail.com",
+  "description": "description",
+  "python_version": "3.10",
+  "license": [
+    "none",
+    "MIT"
+  ]
+}

@@ -1,0 +1,33 @@
+# https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#a-full-example
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = {{ cookiecutter.repository_name|tojson }}
+dynamic = ["version"]
+requires-python = ">={{ cookiecutter.python_version }}"
+authors = [
+    { name = {{ cookiecutter.author_name|tojson }}, email = {{ cookiecutter.author_email|tojson }} }
+]
+description = {{ cookiecutter.description|tojson }}
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",{% if cookiecutter.license == "MIT" %}
+    "License :: OSI Approved :: MIT License",{% endif %}
+]
+
+[tool.setuptools]
+py-modules = [
+    {{ cookiecutter.project_name|tojson }},
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "{{ cookiecutter.project_name }}.__version__"}
+
+# [project.dependencies]
+
+# [project.urls]
+
+[project.scripts]
+{{ cookiecutter.repository_name|tojson }} = "{{ cookiecutter.project_name }}:__main__.main"
