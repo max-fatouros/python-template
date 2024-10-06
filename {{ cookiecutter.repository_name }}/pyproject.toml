@@ -16,6 +16,8 @@ classifiers = [
     "Programming Language :: Python :: 3",{% if cookiecutter.license == "MIT" %}
     "License :: OSI Approved :: MIT License",{% endif %}
 ]
+dependencies = [
+]
 
 [tool.setuptools]
 py-modules = [
@@ -24,8 +26,6 @@ py-modules = [
 
 [tool.setuptools.dynamic]
 version = { attr = "{{ cookiecutter.project_name }}.__version__" }
-
-# [project.dependencies]
 
 # [project.urls]
 
