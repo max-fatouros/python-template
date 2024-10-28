@@ -17,6 +17,8 @@ classifiers = [
     "License :: OSI Approved :: MIT License",{% endif %}
 ]
 dependencies = [
+    "rich",
+    "rich-argparse",
 ]
 
 [tool.setuptools]
