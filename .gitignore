@@ -12,3 +12,4 @@ eggs/
 .ipynb_checkpoints
 .vscode/
 logs/
+.DS_STORE
