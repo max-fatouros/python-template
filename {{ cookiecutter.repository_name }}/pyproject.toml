@@ -32,4 +32,4 @@ version = { attr = "{{ cookiecutter.project_name }}.__version__" }
 # [project.urls]
 
 [project.scripts]
-{{ cookiecutter.repository_name|tojson }} = "{{ cookiecutter.project_name }}:__main__.main"
+{{ cookiecutter.repository_name|tojson }} = "{{ cookiecutter.project_name }}.__main__:main"
