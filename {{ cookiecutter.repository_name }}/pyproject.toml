@@ -21,6 +21,13 @@ dependencies = [
     "rich-argparse",
 ]
 
+[project.optional-dependencies]
+dev = [
+    'pytest',
+    'pre-commit',
+    ]
+
+
 [tool.setuptools]
 py-modules = [
     {{ cookiecutter.project_name|tojson }},
@@ -29,6 +36,11 @@ py-modules = [
 
 [tool.setuptools.packages.find]
 include = ["{{ cookiecutter.project_name|tojson }}", "{{ cookiecutter.project_name|tojson }}.*"]
+
+[tool.pytest.ini_options]
+pythonpath = "."
+
+
 [tool.setuptools.dynamic]
 version = { attr = "{{ cookiecutter.project_name }}.__version__" }
 
