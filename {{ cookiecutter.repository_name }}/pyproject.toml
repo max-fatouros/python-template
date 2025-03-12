@@ -26,6 +26,9 @@ py-modules = [
     {{ cookiecutter.project_name|tojson }},
 ]
 
+
+[tool.setuptools.packages.find]
+include = ["{{ cookiecutter.project_name|tojson }}", "{{ cookiecutter.project_name|tojson }}.*"]
 [tool.setuptools.dynamic]
 version = { attr = "{{ cookiecutter.project_name }}.__version__" }
 
