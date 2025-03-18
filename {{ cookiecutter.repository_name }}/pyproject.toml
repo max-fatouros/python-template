@@ -35,7 +35,7 @@ py-modules = [
 
 
 [tool.setuptools.packages.find]
-include = ["{{ cookiecutter.project_name|tojson }}", "{{ cookiecutter.project_name|tojson }}.*"]
+include = ["{{ cookiecutter.project_name }}", "{{ cookiecutter.project_name }}.*"]
 
 [tool.pytest.ini_options]
 pythonpath = "."
