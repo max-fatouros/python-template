@@ -38,6 +38,10 @@ pythonpath = "."
 [tool.setuptools.dynamic]
 version = { attr = "{{ cookiecutter.project_name }}.__version__" }
 
+[tool.isort]
+multi_line_output = 3
+force_grid_wrap = 2
+
 # [project.urls]
 
 [project.scripts]

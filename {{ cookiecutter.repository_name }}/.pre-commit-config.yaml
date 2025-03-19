@@ -20,15 +20,16 @@ repos:
     hooks:
       - id: autopep8
 
-  - repo: https://github.com/asottile/reorder_python_imports
-    rev: v3.14.0
-    hooks:
-      - id: reorder-python-imports
 
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.19.0
     hooks:
       - id: pyupgrade
+
+  - repo: https://github.com/pycqa/isort
+    rev: 6.0.1
+    hooks:
+      - id: isort
 
   - repo: https://github.com/asottile/add-trailing-comma
     rev: v3.1.0
