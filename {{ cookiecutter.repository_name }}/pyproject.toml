@@ -28,12 +28,6 @@ dev = [
     ]
 
 
-[tool.setuptools]
-py-modules = [
-    {{ cookiecutter.project_name|tojson }},
-]
-
-
 [tool.setuptools.packages.find]
 include = ["{{ cookiecutter.project_name }}", "{{ cookiecutter.project_name }}.*"]
 
