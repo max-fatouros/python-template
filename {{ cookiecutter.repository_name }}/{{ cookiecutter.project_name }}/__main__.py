@@ -3,7 +3,7 @@
 """
 import mjaf
 mjaf.logging.set_handlers(
-    logger_name={{ cookiecutter.project_name }},
+    logger_name="{{ cookiecutter.project_name }}",
 )
 
 import argparse
@@ -53,7 +53,7 @@ def main():
 
 
     mjaf.logging.set_handlers(
-        logger_name={{ cookiecutter.project_name }},
+        logger_name="{{ cookiecutter.project_name }}",
         level=args.log_level.upper(),
     )
 
