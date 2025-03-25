@@ -19,7 +19,7 @@ classifiers = [
 dependencies = [
     "rich",
     "rich-argparse",
-    "mjaf==0.1.0"
+    "mjaf==0.2.0"
 ]
 version = '0.0.0'
 
