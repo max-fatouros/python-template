@@ -29,6 +29,13 @@ dev = [
     ]
 
 
+[tool.autopep8]
+# Let isort handle imports
+ignore = [
+    "E401",
+    "E402",
+]
+
 [tool.setuptools.packages.find]
 include = ["{{ cookiecutter.project_name }}", "{{ cookiecutter.project_name }}.*"]
 
