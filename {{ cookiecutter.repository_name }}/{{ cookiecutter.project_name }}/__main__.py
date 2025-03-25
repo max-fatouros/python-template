@@ -11,7 +11,7 @@ import argparse
 from rich_argparse import RawDescriptionRichHelpFormatter, ArgumentDefaultsRichHelpFormatter
 from rich.markdown import Markdown
 
-from {{ cookiecuttter.project_name }}._utils.constants import VERSION
+from {{ cookiecutter.project_name }}._utils.constants import VERSION
 
 import logging
 log = logging.getLogger(__name__)
