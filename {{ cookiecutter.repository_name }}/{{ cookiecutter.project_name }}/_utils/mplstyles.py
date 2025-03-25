@@ -1,7 +1,7 @@
 """
 https://matplotlib.org/stable/tutorials/introductory/customizing.html#defining-your-own-style
 """
-from {{ cookiecutter.project_name }}.utils import paths
+from {{ cookiecutter.project_name }}._utils import paths
 
 PAPER = [
     'seaborn-v0_8',

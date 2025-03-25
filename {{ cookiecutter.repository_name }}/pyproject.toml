@@ -5,7 +5,6 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = {{ cookiecutter.repository_name|tojson }}
-dynamic = ["version"]
 requires-python = ">={{ cookiecutter.python_version }}"
 authors = [
     { name = {{ cookiecutter.author_name|tojson }}, email = {{ cookiecutter.author_email|tojson }} }
