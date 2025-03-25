@@ -11,7 +11,8 @@ import argparse
 from rich_argparse import RawDescriptionRichHelpFormatter, ArgumentDefaultsRichHelpFormatter
 from rich.markdown import Markdown
 
-from {{ cookiecutter.project_name }} import __version__
+from {{ cookiecuttter.project_name }}._utils.constants import VERSION
+
 import logging
 log = logging.getLogger(__name__)
 
@@ -40,7 +41,7 @@ def parse_args():
     )
 
     parser.add_argument(
-        "--version", action="version", version=f"[argparse.prog]%(prog)s[/] version [i]{__version__}[/]"
+        "--version", action="version", version=f"[argparse.prog]%(prog)s[/] version [i]{VERSION}[/]"
     )
 
     args = parser.parse_args()
