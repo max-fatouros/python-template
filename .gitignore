@@ -1,4 +1,5 @@
 __pycache__/
+*.DS_store
 *.py[cod]
 *$py.class
 *.so
