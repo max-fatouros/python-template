@@ -1,10 +1,16 @@
 """
 # {{ cookiecutter.repository_name }}
 """
+import mjaf
+mjaf.logging.set_handlers(
+    logger_name={{ cookiecutter.project_name }},
+)
+
 import argparse
 
 from rich_argparse import RawDescriptionRichHelpFormatter, ArgumentDefaultsRichHelpFormatter
 from rich.markdown import Markdown
+import mjaf
 
 from {{ cookiecutter.project_name }}.utils.custom_logging import log
 from {{ cookiecutter.project_name }} import __version__
@@ -45,8 +51,11 @@ def parse_args():
 def main():
     args = parse_args()
 
-    if args.log_level is not None:
-        log.setLevel(args.log_level.upper())
+
+    mjaf.logging.set_handlers(
+        logger_name={{ cookiecutter.project_name }},
+        level=args.log_level.upper(),
+    )
 
 
 
