@@ -20,6 +20,7 @@ dependencies = [
     "rich",
     "rich-argparse",
 ]
+version = '0.0.0'
 
 [project.optional-dependencies]
 dev = [
@@ -34,9 +35,6 @@ include = ["{{ cookiecutter.project_name }}", "{{ cookiecutter.project_name }}.*
 [tool.pytest.ini_options]
 pythonpath = "."
 
-
-[tool.setuptools.dynamic]
-version = { attr = "{{ cookiecutter.project_name }}.__version__" }
 
 [tool.isort]
 multi_line_output = 3
