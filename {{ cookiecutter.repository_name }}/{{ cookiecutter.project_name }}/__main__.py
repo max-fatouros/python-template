@@ -12,6 +12,8 @@ from rich_argparse import RawDescriptionRichHelpFormatter, ArgumentDefaultsRichH
 from rich.markdown import Markdown
 
 from {{ cookiecutter.project_name }} import __version__
+import logging
+log = logging.getLogger(__name__)
 
 
 def parse_args():
