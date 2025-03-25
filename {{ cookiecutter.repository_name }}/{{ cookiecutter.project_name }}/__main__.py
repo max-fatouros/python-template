@@ -10,7 +10,6 @@ import argparse
 
 from rich_argparse import RawDescriptionRichHelpFormatter, ArgumentDefaultsRichHelpFormatter
 from rich.markdown import Markdown
-import mjaf
 
 from {{ cookiecutter.project_name }}.utils.custom_logging import log
 from {{ cookiecutter.project_name }} import __version__
