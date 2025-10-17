@@ -9,11 +9,13 @@ mjaf.logging.set_handlers(
 import argparse
 
 from rich_argparse import RawDescriptionRichHelpFormatter, ArgumentDefaultsRichHelpFormatter
-from rich.markdown import Markdown
 
 from {{ cookiecutter.project_name }}._utils.constants import VERSION
 
 import logging
+
+import rich
+import rich.markdown
 log = logging.getLogger(__name__)
 
 
@@ -23,7 +25,7 @@ def parse_args():
         pass
 
     parser = argparse.ArgumentParser(
-        description=Markdown(__doc__, style="argparse.text"),
+        description=rich.markdown.Markdown(__doc__, style="argparse.text"),
         formatter_class=CustomFormatter,
     )
     
