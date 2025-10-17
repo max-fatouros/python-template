@@ -17,7 +17,6 @@ import logging
 
 import rich
 import rich.markdown
-import rich.traceback
 
 # get {{ cookiecutter.project_name }}.__main__ logger
 log = logging.getLogger(__name__)
