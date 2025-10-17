@@ -19,7 +19,10 @@ log = logging.getLogger(__name__)
 
 
 def parse_args():
-    class CustomFormatter(RawDescriptionRichHelpFormatter, ArgumentDefaultsRichHelpFormatter):
+    class CustomFormatter(
+        RawDescriptionRichHelpFormatter,
+        ArgumentDefaultsRichHelpFormatter
+    ):
         """This just combines the two formatters using multiple inheritance."""
         pass
 
@@ -43,7 +46,9 @@ def parse_args():
     )
 
     parser.add_argument(
-        "--version", action="version", version=f"[argparse.prog]%(prog)s[/] version [i]{VERSION}[/]"
+        "--version",
+        action="version",
+        version=f"[argparse.prog]%(prog)s[/] version [i]{VERSION}[/]"
     )
 
     args = parser.parse_args()
