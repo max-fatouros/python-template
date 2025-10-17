@@ -59,11 +59,8 @@ def parse_args():
 def main():
     args = parse_args()
 
+    logging.getLogger('{{ cookiecutter.project_name }}').setLevel(args.log_level.upper())
 
-    mjaf.logging.set_handlers(
-        logger_name="{{ cookiecutter.project_name }}",
-        level=args.log_level.upper(),
-    )
 
 
 
