@@ -16,7 +16,10 @@ import logging
 
 import rich
 import rich.markdown
+import rich.traceback
+
 log = logging.getLogger(__name__)
+rich.traceback.install()
 
 
 def parse_args():
