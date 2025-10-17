@@ -2,10 +2,6 @@
 # {{ cookiecutter.repository_name }}
 """
 import mjaf
-# Configure global logger settings
-mjaf.logging.set_handlers(
-    logger_name="{{ cookiecutter.project_name }}",
-)
 
 import argparse
 
@@ -18,7 +14,7 @@ import logging
 import rich
 import rich.markdown
 
-# get {{ cookiecutter.project_name }}.__main__ logger
+# get this module's logger
 log = logging.getLogger(__name__)
 
 
@@ -57,10 +53,14 @@ def parse_args():
     
 def main():
     args = parse_args()
+    # Configure module-root logger
+    mjaf.logging.set_handlers(
+        logger_name="{{ cookiecutter.project_name }}",
+        level=args.log_level.uppter()
+    )
 
-    logging.getLogger('{{ cookiecutter.project_name }}').setLevel(args.log_level.upper())
-
-
+    # get this module's logger
+    log = logging.getLogger(__name__)
 
 
 if __name__ == '__main__':
