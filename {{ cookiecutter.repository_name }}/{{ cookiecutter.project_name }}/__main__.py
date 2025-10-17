@@ -43,6 +43,7 @@ def parse_args():
             'error',
             'critical',
         ],
+        default='warning'
     )
 
     parser.add_argument(
