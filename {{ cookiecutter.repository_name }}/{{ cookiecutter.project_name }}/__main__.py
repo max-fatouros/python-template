@@ -2,6 +2,7 @@
 # {{ cookiecutter.repository_name }}
 """
 import mjaf
+# Configure global logger settings
 mjaf.logging.set_handlers(
     logger_name="{{ cookiecutter.project_name }}",
 )
@@ -18,6 +19,7 @@ import rich
 import rich.markdown
 import rich.traceback
 
+# get {{ cookiecutter.project_name }}.__main__ logger
 log = logging.getLogger(__name__)
 rich.traceback.install()
 
