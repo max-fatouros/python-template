@@ -21,7 +21,6 @@ import rich.traceback
 
 # get {{ cookiecutter.project_name }}.__main__ logger
 log = logging.getLogger(__name__)
-rich.traceback.install()
 
 
 def parse_args():
